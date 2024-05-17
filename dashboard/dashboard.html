@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--=============INTERNAL CSS IMPORTS =============-->
+    <link rel="stylesheet" href="../style/mainstyle.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!--=============INTERNAL JS IMPORTS =============-->
+    <script type="module" src="scripts/interfaceoperations.js" defer></script>
+    <script type="module" src="scripts/noteeditor.js" defer></script>
+    <script type="module" src="scripts/dashboard.js" defer></script>
+
+    <!--=============EXTERNAL CODE IMPORTS =============-->
+
+    <!-- FONT AWESOME IMPORT -->
+    <script src="https://kit.fontawesome.com/e821d8f4c6.js" crossorigin="anonymous"></script>
+    
+    <!-- MD-BLOCK + PRISM IMPORTS (FOR NOTE EDITOR) -->
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="/assets/NexusLogo.ico">
+    <title>NexusFlow | Dashboard</title>
+       
+</head>
+<body>
+
+    <script type="module">
+        // TODO: Blackout the screen until the user is logged in
+        import { autoLogin } from '../../scripts/autologin.js';
+        await autoLogin();
+        localStorage.removeItem('autologgedin');
+    </script>
+
+    <header class="header">
+        
+        <div class="logo">
+            <h2><a href="../index.html">NexusFlow</a></h2>
+        </div>
+
+        <h1>‎</h1>
+
+        <div class="buttons">
+            <button id="account-button"><i class="account-button fa-solid fa-circle-user"></i>Account</button>
+            <button id="logout-button"><i class="logout-button fa-solid fa-right-from-bracket"></i>Logout</button>
+            <button id="delete-account-button"><i class="deleteacc-button fa-solid fa-user-slash"></i>Delete</button>
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <div class="left-section main-section">
+            <div class="left-top-section sub-section">
+                <span class="parent-pretext">Parent Note: </span>
+                <span id="parent-text" class="parent-text">None</span>
+            </div>
+
+            <div id="note-dropdown" class="left-middle-section sub-section">
+
+                <div id="note-container" class="note-container"></div>
+
+            </div>
+
+            <div class="left-bottom-section sub-section">
+
+                <div class="action-button-container">
+                    <i id="back-button" class="action-button-icon fa-solid fa-circle-arrow-left"></i>
+                    <span class="action-button-text">Go Back</span>
+                </div>
+
+                <div class="action-button-container">
+                    <i id="create-button" class="action-button-icon fa-solid fa-circle-plus"></i>
+                    <span class="action-button-text">Create Note</span>
+                </div>
+
+                <div class="action-button-container">
+                    <i id="forward-button" class="action-button-icon fa-solid fa-circle-arrow-right"></i>
+                    <span class="action-button-text">Go Forward</span>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="middle-section main-section">        
+            <div id="note-editor-section" class="middle-top-section sub-section">
+
+                <div id="node-editor-settings-button" class="node-editor-settings-button"><i class="fa-solid fa-gear"></i></div>
+
+                <div id="node-editor-settings-menu" class="node-editor-settings-menu">
+                    
+                    <div class="view-toggle-container node-editor-button-container">
+                        <button id="view-button" class="view-button">View</button>
+                        <button id="edit-button" class="edit-button">Edit</button>
+                    </div>
+                    
+                    <div class="textsize-toggle-container node-editor-button-container">
+                        <span>Text Size:</span>
+                        <button id="textsize-increase-button" class="textsize-increase-button"><i class="fa-solid fa-plus"></i></button>
+                        <button id="textsize-decrease-button" class="textsize-decrease-button"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+
+                </div>
+
+                <md-block id="note-viewer" class="note-window note-viewer line-numbers"></md-block>
+
+                <div id="note-editor" class="note-window note-editor" contenteditable="true"></div>
+
+            </div>
+        </div>
+
+        <div class="right-section main-section">
+
+            <div id="current-node-container" class="right-top-section sub-section">
+
+                <span id="current-node-name-text" class="node-name-text">None</span>
+
+                <div class="current-node-dates">
+                    <span class="node-creation-date-pretext">Created: 
+                        <span id="current-node-creation-text" class="node-creation-date-text">None</span>
+                    </span>
+                    <span class="node-modification-date-pretext">Last Modified: 
+                        <span id="current-node-modified-text" class="node-modification-date">None</span>
+                    </span>  
+                </div>
+
+                <div class="current-node-actions">
+
+                    <div class="node-action-button-container">
+                        <i id="editname-button" class="node-action-button-icon fa-solid fa-pen-to-square"></i>
+                        <span class="node-action-button-text">Edit Name</span>
+                    </div>
+
+                    <div class="node-action-button-container">
+                        <i id="savenote-button" class="node-action-button-icon fa-solid fa-solid fa-floppy-disk"></i>
+                        <span class="node-action-button-text">Save Note</span>
+                    </div>
+
+                    <div class="node-action-button-container">
+                        <i id="copynote-button" class="node-action-button-icon fa-solid fa-copy"></i>
+                        <span class="node-action-button-text">Copy M.D</span>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <i id="star-left" class="fas fa-star top-left-star"></i>
+                
+            <div id="starred-notes" class="right-bottom-section sub-section">
+
+
+
+            </div>
+
+            <i id="star-right" class="fas fa-star bottom-right-star"></i>
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>

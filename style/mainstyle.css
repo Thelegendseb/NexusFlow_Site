@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+    --bone: #edebf5;
+    --dark-bone: #8074a5;
+    --dark-blue: #1a1b4f;
+    --medium-blue: #222271;
+    --light-blue: #2d2a9b;
+    --charcoal: #101426;
+}
+
+/* ARI'S THEME */
+[data-theme="ari"] {
+    --bone: #cfcadf;
+    --dark-bone: #ffffff;
+    --dark-blue: #d677af;
+    --medium-blue: #ec8fc6;
+    --light-blue: #cf89be;
+    --charcoal: #ffffff;
+}
+
+body {
+    
+    font-family: "Poppins", sans-serif;
+    color: var(--bone);
+    background: linear-gradient(var(--dark-blue),
+                                var(--medium-blue),
+                                var(--light-blue),
+                                var(--light-blue),
+                                var(--medium-blue),
+                                var(--dark-blue));
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Ensure the gradient covers the entire viewport height */
+    overflow: hidden;
+    /* Hide scrollbars */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= MAIN ELEMENT STYLING ================= */
+
+/* ============ HOVER UNDERLINE EFFECT ============ */
+.logo {
+    z-index: 2;
+    position: absolute;
+    left: 50px;
+    top: 0px;
+}
+
+.logo h2 {
+    cursor: pointer;
+    font-size: 2.3rem;
+    color: #e4d9ffff;
+    transition: transform 0.7s ease-out;
+}
+
+.logo h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.logo h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.logo h2:hover {
+    transform: scale(1.1);
+}
+
+/* ============ DOM ELEMENT STYLING ============ */
+
+a {
+    text-decoration: none;
+    color: var(--bone);
+}
+
+.sub-section {
+    flex: 1;
+    border-radius: 20px;
+    background-color: rgba(23, 8, 51, 0.2);
+    margin: 20px;
+    box-shadow: var(--charcoal) 0px 0px 10px 5px;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+.sub-section:hover {
+    transform: scale(1.03);
+    background-color: rgba(23, 7, 53, 0.3);
+}
+
+/* ============== LOADING ============= */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    
+}
+
+.loading-spinner {
+	border-bottom: 12px solid rgba(0, 0, 0, .2);
+	border-left: 12px solid rgba(0, 0, 0, .2);
+	border-right: 12px solid rgba(0, 0, 0, .2);
+	border-top: 12px solid rgba(0, 0, 0, .5);
+	border-radius: 100%;
+	height: 64px;
+	width: 64px;
+	animation: spin .9s infinite linear;
+    text-indent: 999em;
+}
+
+@keyframes spin {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
+}

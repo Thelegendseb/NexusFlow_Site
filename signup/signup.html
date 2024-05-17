@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============INTERNAL CSS IMPORTS =============-->
+    <link rel="stylesheet" href="../style/mainstyle.css">
+    <link rel="stylesheet" href="../style/loginsignup.css">
+    <link rel="stylesheet" href="../style/particleeffect/particles.css">
+
+    <!--=============INTERNAL JS IMPORTS =============-->
+    <script type="module" src="scripts/signup.js"></script>
+    <script src="../style/particleeffect/app.js" defer></script>
+    <script src="../style/particleeffect/particles.js" defer></script>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/NexusLogo.ico">
+    <title>NexusFlow | Sign Up</title>
+
+</head>
+<body>
+
+    <div class="particles-js" id="particles-js">
+
+        <div class="logo">
+            <h2><a href="../index.html">NexusFlow</a></h2>
+        </div>
+
+        <div class="form-holder">
+
+            <h1 class="header">Sign Up</h1>
+
+            <form id="form" class="sub-section">
+                <div class="input-field-container">
+                    <span>First Name</span>
+                    <input id="firstname" type="text" name="first_name" placeholder="First Name"><br>
+                </div>
+                <div class="input-field-container">
+                    <span>Surname</span>
+                    <input id="surname" type="text" name="surname" placeholder="Surname"><br>
+                </div>
+                <div class="input-field-container">
+                    <span>Email</span>
+                    <input id="email" type="email" name="email" placeholder="Email"><br>
+                </div>
+                <div class="input-field-container">
+                    <span>Password</span>
+                    <input id="password" type="password" name="password" placeholder="Password"><br>
+                </div>
+                <div id="submit-container" class="input-field-container">
+                    <button id="signup" class="submit">
+                        Sign Up
+                    </button>
+                </div>
+
+                <div class="switchpage">
+                    <span>Already have an account?</span>
+                    <a href="../login/login.html">Login</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <style>
+        .form-holder {
+            width: 40%;
+            height: 70%;
+        }
+        .input-field-container {
+            height: 18%;
+        }
+    </style>
+    
+</body>
+</html>

@@ -1,0 +1,101 @@
+
+
+.header {
+    text-align: center;
+    text-shadow: 0 0 5px var(--dark-bone);
+}
+
+.form-holder {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+#form {
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#form:hover {
+    transform: none;
+}
+
+.input-field-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field-container span {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.input-field-container input {
+    width: 50%;
+    padding: 10px;
+    color: var(--bone);
+    border: 2px solid var(--light-blue);
+    border-radius: 10px;
+    background-color: var(--dark-blue);
+    font-size: 0.8rem;
+    transition: background-color 0.5s ease;
+}
+
+.input-field-container input:focus {
+    background-color: var(--dark-blue);
+}
+
+.input-field-container input::placeholder {
+    color: var(--dark-bone);
+}
+
+.input-field-container button {
+    width: 50%;
+    height: 60%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: normal;
+    background-color: var(--dark-blue);
+    border: 2px solid var(--light-blue);
+    color: var(--bone);
+    transition: background-color 0.5s ease;
+}
+
+.input-field-container button:hover {  
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--medium-blue);
+}
+
+.switchpage {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    gap: 5px;
+}
+
+.switchpage a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* ============== WEBKIT STYLING ============= */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
