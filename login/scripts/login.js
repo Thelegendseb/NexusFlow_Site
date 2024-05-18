@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             localStorage.setItem('accessToken', loginResponse.AccessToken);
-            window.location.href = "../../dashboard/dashboard.html";
+            window.location.href = "./../../dashboard/dashboard.html";
         } catch (error) {
             alert("Something went wrong. Please try again later.");
             spinner.remove();

@@ -298,7 +298,7 @@ logoutButton.addEventListener('click', async function () {
     await saveCurrentlyViewingNode();
     await logoutUser(accessToken);
     localStorage.clear();
-    window.location.href = '../../login/login.html';
+    window.location.href = './../../login/login.html';
 }
 );
 
@@ -310,7 +310,7 @@ deleteAccountButton.addEventListener('click', async function () {
     }
     await deleteUser(accessToken);
     localStorage.clear();
-    window.location.href = '../../index.html';
+    window.location.href = './../../index.html';
 });
 
 // ================== UI  ACTIONS ==================
