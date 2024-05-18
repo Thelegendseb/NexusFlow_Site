@@ -1,10 +1,11 @@
-import { UserDTO } from '../../models/userDTO.js';
-import { LoginDTO } from '../../models/loginDTO.js';
-import { createUser, loginUser } from '../../scripts/useractions.js';
+import { UserDTO } from './../../models/userDTO.js';
+import { LoginDTO } from './../../models/loginDTO.js';
 
-import { createLoadingSpinner } from '../../scripts/domfactory.js';
+import { createUser, loginUser } from './../../scripts/useractions.js';
 
-import { checkReferralCode } from '../../scripts/referralactions.js';
+import { createLoadingSpinner } from './../../scripts/domfactory.js';
+
+import { checkReferralCode } from './../../scripts/referralactions.js';
 
 const form = document.getElementById("form");
 
@@ -19,11 +20,11 @@ document.addEventListener('DOMContentLoaded', async function() {
             alert("Referral code for " + validReferral.user + " has been entered.");
         } else {
             alert("The referral code you entered is invalid.");
-            window.location.href = "../../index.html";
+            window.location.href = "./../../index.html";
         }
     } else {
         alert("You must enter a referral code to sign up.");
-         window.location.href = "../../index.html";
+         window.location.href = "./../../index.html";
     }
     // ==================== REFERRAL CODE ====================
 
@@ -57,7 +58,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
                 localStorage.setItem('accessToken', loginResponse.AccessToken);
                 localStorage.setItem('firsttimelogin', true);
-                window.location.href = "../../dashboard/dashboard.html";
+                window.location.href = "./../../dashboard/dashboard.html";
             } else {
                 spinner.remove();
                 alert("Failed to create user. Please try again later.");

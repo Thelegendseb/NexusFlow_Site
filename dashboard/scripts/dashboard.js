@@ -6,24 +6,24 @@ import { getRootNode,
         addNode,
         deleteNode,
         editNode,
-        getStarredNodes } from '../../scripts/nodeactions.js'; 
+        getStarredNodes } from './../../scripts/nodeactions.js'; 
 
 // import user action functions
 import { logoutUser,
-         deleteUser } from '../../scripts/useractions.js';
+         deleteUser } from './../../scripts/useractions.js';
 
 // Import DOM Factory functions
 import { createTreeItem,
         createStarItem,
         createItemSeparator,
-        createLoadingSpinner } from '../../scripts/domfactory.js'; 
+        createLoadingSpinner } from './../../scripts/domfactory.js'; 
 
 // Import Note Editor functions
 import { InsertNote, GetNote } from './noteeditor.js';
 
 // Import Models
-import { NexusNodeCreationDTO } from '../../models/NexusNodeCreationDTO.js';
-import { NexusNodeDataDTO } from '../../models/NexusNodeDataDTO.js';
+import { NexusNodeCreationDTO } from './../../models/NexusNodeCreationDTO.js';
+import { NexusNodeDataDTO } from './../../models/NexusNodeDataDTO.js';
 
 // ========================================================  
 

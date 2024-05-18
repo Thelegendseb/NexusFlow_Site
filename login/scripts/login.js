@@ -1,7 +1,7 @@
-import { LoginDTO } from '../../models/loginDTO.js';
-import { loginUser } from '../../scripts/useractions.js';
-import { autoLogin } from '../../scripts/autologin.js';
-import { createLoadingSpinner } from '../../scripts/domfactory.js';
+import { LoginDTO } from './../../models/loginDTO.js';
+import { loginUser } from './../../scripts/useractions.js';
+import { autoLogin } from './../../scripts/autologin.js';
+import { createLoadingSpinner } from './../../scripts/domfactory.js';
 
 await autoLogin();
 
