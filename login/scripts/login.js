@@ -1,7 +1,7 @@
-import { LoginDTO } from './models/loginDTO.js';
-import { loginUser } from './scripts/useractions.js';
-import { autoLogin } from './scripts/autologin.js';
-import { createLoadingSpinner } from './scripts/domfactory.js';
+import { LoginDTO } from '../../models/loginDTO.js';
+import { loginUser } from '../../scripts/useractions.js';
+import { autoLogin } from '../../scripts/autologin.js';
+import { createLoadingSpinner } from '../../scripts/domfactory.js';
 
 await autoLogin();
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             localStorage.setItem('accessToken', loginResponse.AccessToken);
-            window.location.href = "./../../dashboard/dashboard.html";
+            window.location.href = "../../dashboard/dashboard.html";
         } catch (error) {
             alert("Something went wrong. Please try again later.");
             spinner.remove();
