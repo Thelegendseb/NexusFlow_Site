@@ -1,6 +1,6 @@
 import { NexusNodeCreationDTO } from '../models/nexusNodeCreationDTO.js';
 import { NexusNodeDataDTO } from '../models/nexusNodeDataDTO.js';
-import { NexusNodeDTO } from '../models/NexusNodeDTO.js';
+import { NexusNodeDTO } from '../models/nexusNodeDTO.js';
 
 const endpoint = "https://nexusflow.azurewebsites.net/API/Nodes/";
 
