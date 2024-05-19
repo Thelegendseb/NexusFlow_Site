@@ -22,8 +22,8 @@ import { createTreeItem,
 import { InsertNote, GetNote } from './noteeditor.js';
 
 // Import Models
-import { NexusNodeCreationDTO } from './../../models/NexusNodeCreationDTO.js';
-import { NexusNodeDataDTO } from './../../models/NexusNodeDataDTO.js';
+import { NexusNodeCreationDTO } from './../../models/nexusNodeCreationDTO.js';
+import { NexusNodeDataDTO } from './../../models/nexusNodeDataDTO.js';
 
 // ========================================================  
 

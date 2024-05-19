@@ -1,4 +1,3 @@
-// import paths are case senitive
 import { NexusNodeCreationDTO } from '../models/nexusNodeCreationDTO.js';
 import { NexusNodeDataDTO } from '../models/nexusNodeDataDTO.js';
 import { NexusNodeDTO } from '../models/nexusNodeDTO.js';
