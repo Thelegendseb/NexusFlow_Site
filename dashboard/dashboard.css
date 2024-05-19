@@ -106,7 +106,7 @@ header.header {
 
 .parent-pretext,
 .parent-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .parent-text {
@@ -129,7 +129,7 @@ header.header {
     display: flex;
     padding: 10px;
     margin-left: 10px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .item-name {
@@ -227,7 +227,7 @@ header.header {
 }
 
 .action-button-icon {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     cursor: pointer;
 }
 
@@ -411,7 +411,7 @@ md-block pre {
 }
 
 .node-action-button-icon {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     cursor: pointer;
     padding: 10px 11px 10px 11px;
     border-radius: 100%;
@@ -420,7 +420,7 @@ md-block pre {
 }
 
 .node-action-button-text {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-top: 10px;
 }
 

@@ -135,7 +135,7 @@ async function onClick_Star(domObject, node) {
 
 async function onClick_Delete(domObject, node) {
     // Handle delete button click
-    if (IsRoot(node.Id)) {
+    if (IsRoot(node.Id) || node.Name == "root") {
         alert("You cannot delete the root node.");
         return;
     }

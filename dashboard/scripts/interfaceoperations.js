@@ -39,8 +39,8 @@ function makeScrollable(elementId, bottomOffset = 0) {
     // });
 }
 
-makeScrollable('note-editor', 50);
-makeScrollable('note-viewer', 50);
+makeScrollable('note-editor', 35);
+makeScrollable('note-viewer', 35);
 makeScrollable('note-container', 30);
 makeScrollable('starred-notes', 30);
 

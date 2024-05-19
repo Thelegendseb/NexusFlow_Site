@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // ==================== REFERRAL CODE ====================
     let referralCode = prompt("Enter your referral code:");
-
+    // TODO: Loading Bar Here
     if (referralCode) {
         let validReferral = await checkReferralCode(referralCode);
         if (validReferral.isValid == true) {
