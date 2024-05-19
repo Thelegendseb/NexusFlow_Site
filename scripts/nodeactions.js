@@ -1,6 +1,7 @@
-import { NexusNodeCreationDTO } from '../models/NexusNodeCreationDTO.js';
-import { NexusNodeDataDTO } from '../models/NexusNodeDataDTO.js';
-import { NexusNodeDTO } from '../models/NexusNodeDTO.js';
+// import paths are case senitive
+import { NexusNodeCreationDTO } from '../models/nexusNodeCreationDTO.js';
+import { NexusNodeDataDTO } from '../models/nexusNodeDataDTO.js';
+import { NexusNodeDTO } from '../models/nexusNodeDTO.js';
 
 const endpoint = "https://nexusflow.azurewebsites.net/API/Nodes/";
 

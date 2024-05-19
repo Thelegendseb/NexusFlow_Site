@@ -1,5 +1,5 @@
 // Importing LoginResponseDTO from a different directory
-import { LoginResponseDTO } from '../models/LoginResponseDTO.js';
+import { LoginResponseDTO } from '../models/loginResponseDTO.js';
 
 const endpoint = "https://nexusflow.azurewebsites.net/API/Users/";
 
