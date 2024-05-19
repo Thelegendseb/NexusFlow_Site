@@ -1,5 +1,5 @@
-import { UserDTO } from '../../models/UserDTO.js';
-import { LoginDTO } from '../../models/LoginDTO.js';
+import { UserDTO } from '../../models/userDTO.js';
+import { LoginDTO } from '../../models/loginDTO.js';
 
 import { createUser, loginUser } from '../../scripts/useractions.js';
 
